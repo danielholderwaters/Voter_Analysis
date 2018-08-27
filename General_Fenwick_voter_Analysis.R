@@ -10,12 +10,14 @@ data(zipcode)
 nrow(zipcode)
 
 head(zipcode)
+#this is my working directory.  change it to your preferred filepath
 setwd("C:/Users/danie/Documents/civic engagement/Ryan Campaign/")
+#the data came from VoteBuilder, combining ryan's previously recorded canvassing data with the existing data in the votebuilder/DNC database
 power <- read_excel("C:/Users/danie/Documents/civic engagement/Ryan Campaign/Fenwick Master data 3-21-2018.xlsx", sheet="DanielsFormatAllthegoodstuff201")
 # !diagnostics off
 #make sure all variable names start with letters and not numbers.  In excel, I ran a quick 'find and replace' for "2016:"
 ryandatazip <- merge(power, zipcode, by.x="Zip5", by.y = "zip")
-
+ 
 louisville <- c(lon= -85.7, lat=38.21)
 louisville_map <- get_map(louisville, zoom = 11, scale = 1)
 ggmap(louisville_map) +
