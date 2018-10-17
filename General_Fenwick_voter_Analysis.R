@@ -1,5 +1,7 @@
 #messing with political data
-
+#I was treasurer for Ryan Fenwick's 2018 Mayoral campaign in Louisville and had the opportunity to do some descriptive data analytics for the team
+#this data combines Democrat voter information with results of our first few months of canvassing
+#the goal: determine how to prioritize canvassing efforts and focus our spending to maximize impact 
 
 library(readxl)
 library(zipcode)
@@ -8,7 +10,6 @@ library(dplyr)
 data(zipcode)
 
 nrow(zipcode)
-
 head(zipcode)
 #this is my working directory.  change it to your preferred filepath
 setwd("C:/Users/danie/Documents/civic engagement/Ryan Campaign/")
